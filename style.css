@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: 'MuseoModerno', cursive; */
+    font-family: 'Pangolin', cursive;
+}
+.container {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.btn-open {
+    font-size: 17px;
+    font-weight: 200;
+    padding: 4px;
+    margin-bottom: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, .25);
+}
+.btn-open:focus {
+    outline: none;
+}
+.btn-open:active {
+    box-shadow: inset 0 3px 20px rgba(0, 0, 0, .25);
+}
+.modal {
+    transform: translateX(-200%);
+    width: 500px;
+    min-height: 500px;
+    background: #fff;
+    border-radius: 9px;
+    transition: 0.3s;
+}
+.open-modal {
+    transform: translateX(0%);
+}
+
+.modal__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+    width: 100%;
+    background-color: #7CFC00;
+}
+.modal__header-text {
+    font-size: 30px;
+    font-weight: 600;
+}
+.modal__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 310px;
+    width: 100%;
+    background-color: #00FF00;
+}
+.modal__main-form {
+    height: 300px;
+    width: 470px;
+}
+.modal__main-fieldset {
+    position: relative;
+    padding: 7px;
+}
+.modal__main-text {
+    font-size: 20px;
+    font-weight: 400;
+}
+.modal__main-input {
+    position: absolute;
+    border-radius: 8px;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, .25);
+    padding: 5px;
+    right: 8px;
+    width: 160px;
+    height: 24px;
+}
+.modal__main-submit {
+    float: right;
+    font-size: 17px;
+    font-weight: 200;
+    padding: 4px;
+    margin-left: 3px;
+    margin-bottom: 3px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, .25)
+}
+.modal__main-submit:focus {
+    outline: none;
+    box-shadow: inset 0 3px 20px rgba(0, 0, 0, .50);
+}
+.modal__footer {
+    height: 80px;
+    width: 100%;
+    background-color: #32CD32;
+}
+
+
+
+/* Адаптив */
+
+@media(max-width: 550px) {
+    .modal {
+        width: 400px;
+    }
+}
+@media(max-width: 450px) {
+    .modal {
+        width: 350px;
+    }
+}
+@media(max-width: 360px) {
+    .modal {
+        width: 310px;
+    }
+    .modal__main-text {
+        font-size: 17px;
+    }
+    .modal__main-input {
+        width: 150px;
+        height: 25px;
+        right: 4px;
+    }
+}
